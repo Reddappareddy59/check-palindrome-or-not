@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void main()
+{
+    int reversenumber=0,originalnumber,number,lastdigit;
+    //to find wheather a given number is palindrome or not we need to check the reverse of that number is equal to original number or not
+    //if it matches with original number then it is a palindrome otherwise it is not
+    printf("enter a number to check it is a palindromeor not:");
+    scanf("%d",&number);
+    //let assign to a number to another number so that we can use it later the value
+    originalnumber=number;
+    while(number!=0)
+    {
+        lastdigit=number%10;//to get the last digit of given number
+        reversenumber=reversenumber*10+lastdigit;//computation
+        number=number/10;//remaining number
+    }
+    if(originalnumber==reversenumber)
+    {
+        printf("it is a palindrome");
+    }
+    else
+    {
+        printf("it is not a palindrome");
+    }
+}
